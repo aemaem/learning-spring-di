@@ -15,4 +15,9 @@ public class OrderServiceImpl {
     public void setOrderRepository(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
+
+    public boolean validate(Integer orderId) {
+        String order = orderRepository.findById(orderId);
+        return order != null;
+    }
 }

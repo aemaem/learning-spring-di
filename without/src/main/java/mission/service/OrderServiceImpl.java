@@ -7,9 +7,14 @@ import mission.repository.OrderRepositoryImpl;
  */
 public class OrderServiceImpl {
 
-    private OrderRepositoryImpl orderRepository;
+    private final OrderRepositoryImpl orderRepository;
 
     public OrderServiceImpl() {
         this.orderRepository = new OrderRepositoryImpl();
+    }
+
+    public boolean validate(Integer orderId) {
+        String order = orderRepository.findById(orderId);
+        return order != null;
     }
 }
