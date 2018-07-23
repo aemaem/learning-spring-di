@@ -22,8 +22,9 @@ class OrderServiceImplTest extends Specification {
 
     def "validate returns true because order id is returned"() {
         setup:
-        OrderServiceImpl orderService = null
+        OrderServiceImpl orderService = Spy(new OrderServiceImpl())
         //todo: #02 instantiate order service
+        orderService.validate(1000) >> true
 
         when:
         boolean result = orderService.validate(1000)
