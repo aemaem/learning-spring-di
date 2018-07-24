@@ -1,5 +1,6 @@
 package mission;
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -7,5 +8,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 //todo: #16 configure component scan
+@ComponentScan
 public class OrderConfiguration {
 }
