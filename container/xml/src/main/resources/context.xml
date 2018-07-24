@@ -4,5 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--todo: #09 register bean-->
+    <bean id="orderRepository"
+          class="mission.repository.OrderRepositoryImpl"/>
 
 </beans>

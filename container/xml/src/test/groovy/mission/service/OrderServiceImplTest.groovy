@@ -1,5 +1,6 @@
 package mission.service
 
+import mission.repository.OrderRepository
 import mission.service.OrderServiceImpl
 import org.springframework.context.ApplicationContext
 import org.springframework.context.support.FileSystemXmlApplicationContext
@@ -16,7 +17,7 @@ class OrderServiceImplTest extends Specification {
 
         when:
         //todo: #10 get bean from application context
-        OrderServiceImpl orderService = new OrderServiceImpl(null)
+        OrderServiceImpl orderService = new OrderServiceImpl(xmlContext.getBean(OrderRepository))
         and:
         def result = orderService.validate(1000)
 
