@@ -9,4 +9,8 @@ project 'di/without'
 project 'di/constructor'
 project 'di/setter'
 
+project 'container/static'
+project 'container/xml'
+project 'container/annotation'
+
 rootProject.children.each { it.projectDir = new File(settingsDir, projectDefinition[it.name] ?: "") }
