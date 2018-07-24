@@ -1,0 +1,3 @@
+dependencies {
+    testRuntime 'net.bytebuddy:byte-buddy:1.6.14'
+}
