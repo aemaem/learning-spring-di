@@ -1,3 +1,12 @@
-include 'without'
-include 'constructor'
-include 'setter'
+def projectDefinition = [:]
+def project = { Map map, String projectPath ->
+    String projectName = projectPath.tokenize("/")[-1]
+    map.put(projectName, projectPath)
+    include projectName as String
+}.curry(projectDefinition)
+
+project 'di/without'
+project 'di/constructor'
+project 'di/setter'
+
+rootProject.children.each { it.projectDir = new File(settingsDir, projectDefinition[it.name] ?: "") }
