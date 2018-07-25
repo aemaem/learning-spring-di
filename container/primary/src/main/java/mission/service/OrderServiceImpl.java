@@ -1,6 +1,7 @@
 package mission.service;
 
 import mission.repository.OrderRepository;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 //todo: #25 add primary annotation
+@Primary
 public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;
