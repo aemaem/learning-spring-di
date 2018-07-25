@@ -11,7 +11,7 @@ class OrderServiceImplTest extends Specification {
     def "validate returns false because order id is null"() {
         setup:
         OrderServiceImpl orderService = null
-        //todo: #05 inject dependent object as mock
+        //todo: #03 inject dependent object as mock
 
         when:
         boolean result = orderService.validate(null)
@@ -23,7 +23,7 @@ class OrderServiceImplTest extends Specification {
     def "validate returns true because order id is returned"() {
         setup:
         OrderServiceImpl orderService = null
-        //todo: #06 inject dependent object as mock
+        //todo: #04 inject dependent object as mock
 
         when:
         boolean result = orderService.validate(1000)
