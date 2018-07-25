@@ -14,5 +14,6 @@ project 'container/xml'
 project 'container/annotation'
 project 'container/scan'
 project 'container/autowired'
+project 'container/qualifier'
 
 rootProject.children.each { it.projectDir = new File(settingsDir, projectDefinition[it.name] ?: "") }
