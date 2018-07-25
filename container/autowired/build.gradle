@@ -1,0 +1,4 @@
+dependencies {
+    compile 'org.springframework:spring-context:5.0.7.RELEASE'
+    testCompile 'org.springframework:spring-test:5.0.7.RELEASE'
+}
