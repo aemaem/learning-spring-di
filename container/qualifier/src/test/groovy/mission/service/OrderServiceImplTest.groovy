@@ -12,7 +12,7 @@ import spock.lang.Subject
 class OrderServiceImplTest extends Specification {
 
     @Subject
-    //todo: #21 add autowired annotation along with qualifier
+    //todo: #24 add autowired annotation along with qualifier
     private OrderService orderService
 
     def "bean is autowired"() {
