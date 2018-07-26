@@ -17,4 +17,7 @@ project 'container/autowired'
 project 'container/qualifier'
 project 'container/primary'
 
+project 'scope/singleton'
+project 'scope/prototype'
+
 rootProject.children.each { it.projectDir = new File(settingsDir, projectDefinition[it.name] ?: "") }

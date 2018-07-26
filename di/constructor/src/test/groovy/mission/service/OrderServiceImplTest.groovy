@@ -11,9 +11,9 @@ class OrderServiceImplTest extends Specification {
 
     def "validate returns false because order id is null"() {
         setup:
-        OrderRepository orderRepositoryMock = Mock()
-        OrderServiceImpl orderService = new OrderServiceImpl(orderRepositoryMock)
-        //todo: #05 inject dependent object as mock
+        OrderRepository repositoryMock = Mock()
+        OrderServiceImpl orderService = new OrderServiceImpl(repositoryMock)
+        //todo: #03 inject dependent object as mock
 
         when:
         boolean result = orderService.validate(null)
@@ -24,10 +24,10 @@ class OrderServiceImplTest extends Specification {
 
     def "validate returns true because order id is returned"() {
         setup:
-        OrderRepository orderRepositoryMock = Mock()
-        orderRepositoryMock.findById(1000) >> "T-Shirts"
-        OrderServiceImpl orderService = new OrderServiceImpl(orderRepositoryMock)
-        //todo: #06 inject dependent object as mock
+        OrderRepository repositoryMock = Mock()
+        repositoryMock.findById(1000) >> "foo"
+        OrderServiceImpl orderService = new OrderServiceImpl(repositoryMock)
+        //todo: #04 inject dependent object as mock
 
         when:
         boolean result = orderService.validate(1000)
