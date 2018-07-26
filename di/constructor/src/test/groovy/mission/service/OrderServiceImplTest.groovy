@@ -1,5 +1,6 @@
 package mission.service
 
+import mission.repository.OrderRepository
 import mission.service.OrderServiceImpl
 import spock.lang.Specification
 
@@ -10,7 +11,8 @@ class OrderServiceImplTest extends Specification {
 
     def "validate returns false because order id is null"() {
         setup:
-        OrderServiceImpl orderService = null
+        OrderRepository repositoryMock = Mock()
+        OrderServiceImpl orderService = new OrderServiceImpl(repositoryMock)
         //todo: #03 inject dependent object as mock
 
         when:
@@ -22,7 +24,9 @@ class OrderServiceImplTest extends Specification {
 
     def "validate returns true because order id is returned"() {
         setup:
-        OrderServiceImpl orderService = null
+        OrderRepository repositoryMock = Mock()
+        repositoryMock.findById(1000) >> "foo"
+        OrderServiceImpl orderService = new OrderServiceImpl(repositoryMock)
         //todo: #04 inject dependent object as mock
 
         when:
