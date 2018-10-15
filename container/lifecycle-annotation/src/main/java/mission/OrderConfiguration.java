@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 //todo: #41 add component scan
+@ComponentScan
 public class OrderConfiguration {
 
 }
