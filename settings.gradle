@@ -17,6 +17,7 @@ project 'container/autowired'
 project 'container/qualifier'
 project 'container/primary'
 project 'container/lifecycle-interface'
+project 'container/lifecycle-annotation'
 
 project 'scope/singleton'
 project 'scope/prototype'
