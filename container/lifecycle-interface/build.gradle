@@ -1,0 +1,5 @@
+dependencies {
+    compile 'org.springframework:spring-context:5.0.7.RELEASE'
+    //todo: #33 add SLF4J dependency (search in mvnrepository.com)
+    runtime 'ch.qos.logback:logback-classic:1.2.3'
+}
