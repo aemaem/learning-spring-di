@@ -14,6 +14,7 @@ class OrderServiceImplTest extends Specification {
 
     @Subject
     //todo: #38 inject bean with annotation
+    @Autowired
     private OrderServiceImpl orderService
 
     def "bean is running"() {
