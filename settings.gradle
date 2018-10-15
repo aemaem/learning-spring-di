@@ -16,6 +16,7 @@ project 'container/scan'
 project 'container/autowired'
 project 'container/qualifier'
 project 'container/primary'
+project 'container/lifecycle-interface'
 
 project 'scope/singleton'
 project 'scope/prototype'
